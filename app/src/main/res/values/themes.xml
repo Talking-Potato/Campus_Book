@@ -2,9 +2,9 @@
     <!-- Base application theme. -->
     <style name="Theme.Term_Project" parent="Theme.AppCompat.Light">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimary">#F5F5F5</item>
+        <item name="colorPrimaryVariant">#364F6B</item>
+        <item name="colorOnPrimary">#FC5185</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_700</item>
