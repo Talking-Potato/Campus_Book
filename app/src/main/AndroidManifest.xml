@@ -18,6 +18,9 @@
             android:value="AIzaSyCgG5Pn0lVwxHaIe-q0LsVpbTkp_jfkA-o"/>
         <activity
             android:name=".LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".BottomActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
