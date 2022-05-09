@@ -1,33 +1,42 @@
 {
   "project_info": {
-    "project_number": "848658819541",
-    "project_id": "campus-book-c6cab",
-    "storage_bucket": "campus-book-c6cab.appspot.com"
+    "project_number": "704593367935",
+    "firebase_url": "https://campusbook-487cb-default-rtdb.firebaseio.com",
+    "project_id": "campusbook-487cb",
+    "storage_bucket": "campusbook-487cb.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:848658819541:android:5cc7ada458d56904ecf55c",
+        "mobilesdk_app_id": "1:704593367935:android:835952ded0d1a90f81c04a",
         "android_client_info": {
           "package_name": "com.example.term_project"
         }
       },
       "oauth_client": [
         {
-          "client_id": "848658819541-893jbl2k8h70hk17b1lib0u6kolpfs5l.apps.googleusercontent.com",
+          "client_id": "704593367935-ev2b4fubul1vl80casjl4qeui9h2ro4t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.term_project",
+            "certificate_hash": "806c8aa739dfa6e2ec7eca20ac608cfe518138b6"
+          }
+        },
+        {
+          "client_id": "704593367935-mg89umvchj1c1agga9kvlsoq05rgephk.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDdqhUnAylGSPDVkdPB0oSpiO0HU2qBHao"
+          "current_key": "AIzaSyAdMBNbwZrgYPUC_SZ0IujCcXFZms-yCrM"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "848658819541-893jbl2k8h70hk17b1lib0u6kolpfs5l.apps.googleusercontent.com",
+              "client_id": "704593367935-mg89umvchj1c1agga9kvlsoq05rgephk.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
