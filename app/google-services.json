@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "848658819541",
+    "project_id": "campus-book-c6cab",
+    "storage_bucket": "campus-book-c6cab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:848658819541:android:5cc7ada458d56904ecf55c",
+        "android_client_info": {
+          "package_name": "com.example.term_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "848658819541-893jbl2k8h70hk17b1lib0u6kolpfs5l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdqhUnAylGSPDVkdPB0oSpiO0HU2qBHao"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "848658819541-893jbl2k8h70hk17b1lib0u6kolpfs5l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
