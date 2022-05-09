@@ -10,6 +10,8 @@
         android:layout_height="wrap_content">
 
         <Button
+            android:id="@+id/signBack"
+            android:text="돌아가기"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left" />
@@ -25,27 +27,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginVertical="10dp"
-        android:text="아이디" />
+        android:text="학교 이메일" />
 
-    <LinearLayout
+    <EditText
+        android:id="@+id/editEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginVertical="10dp"
-        android:orientation="horizontal">
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/login_box"
-            android:hint="ex) Gachon_potato"
-            android:paddingHorizontal="10dp" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="중복확인"
-            android:textSize="13dp" />
-    </LinearLayout>
+        android:background="@drawable/login_box"
+        android:hint="ex) potato@gachon.ac.kr"
+        android:paddingHorizontal="10dp" />
 
     <TextView
         android:layout_width="match_parent"
@@ -54,10 +44,12 @@
         android:text="비밀번호" />
 
     <EditText
+        android:id="@+id/editPW"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/login_box"
         android:hint="비밀번호를 입력해주세요"
+        android:inputType="textPassword"
         android:paddingHorizontal="10dp" />
 
 
@@ -68,10 +60,12 @@
         android:text="비밀번호 확인" />
 
     <EditText
+        android:id="@+id/editCheckPW"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/login_box"
         android:hint="비밀번호를 한번더 입력해주세요"
+        android:inputType="textPassword"
         android:paddingHorizontal="10dp" />
 
     <TextView
@@ -81,6 +75,7 @@
         android:text="이름" />
 
     <EditText
+        android:id="@+id/editName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/login_box"
@@ -94,6 +89,7 @@
         android:text="학번" />
 
     <EditText
+        android:id="@+id/editSchoolID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/login_box"
@@ -101,10 +97,10 @@
         android:paddingHorizontal="10dp" />
 
     <Button
+        android:id="@+id/complete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id = "@+id/complete"
-        android:text ="회원가입 완료"
-        android:layout_gravity="right" />
+        android:layout_gravity="right"
+        android:text="회원가입 완료" />
 
 </LinearLayout>
