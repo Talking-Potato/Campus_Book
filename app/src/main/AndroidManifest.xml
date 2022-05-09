@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.term_project">
 
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -26,7 +28,7 @@
         </activity>
         <activity android:name=".HomeActivity">
         </activity>
-        <activity android:name=".activity_main_screen">
+        <activity android:name=".MapFragment">
         </activity>
     </application>
 
