@@ -9,19 +9,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class BottomActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
-    Mylevel mylevelFrag;
-    Achievement achievementFrag;
+    MyLevelFragment mylevelFrag;
+    AchievementFragment achievementFrag;
 //    Fragment3 fragment3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.bottom_activity);
+        setContentView(R.layout.activity_main);
 
-        mylevelFrag = new Mylevel();
-        achievementFrag = new Achievement();
+        mylevelFrag = new MyLevelFragment();
+        achievementFrag = new AchievementFragment();
 //        fragment3 = new Fragment3();
 
         getSupportFragmentManager().beginTransaction().replace(R.id.bottom_container, mylevelFrag).commit();
@@ -31,15 +31,23 @@ public class BottomActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
-//                    case R.id.tab1:
+
+//                    case R.id.tab1: // 지도 선택시 지도 fragment로 넘어감
 //                        Toast.makeText(getApplicationContext(), "첫번째 탭", Toast.LENGTH_SHORT).show();
 //                        getSupportFragmentManager().beginTransaction().replace(R.id.bottom_container, mylevelFrag).commit();
 //                        return true;
-                    case R.id.tab2:
+
+//                    case R.id.tab2: // QR 선택했을때 QR fragemnt로 넘어감
+//                        Toast.makeText(getApplicationContext(), "두번째 탭", Toast.LENGTH_SHORT).show();
+//                        getSupportFragmentManager().beginTransaction().replace(R.id.bottom_container, achievementFrag).commit();
+//                        return true;
+
+                    case R.id.tab3: // 업적 선택시 업적 fragment로 넘어감
                         Toast.makeText(getApplicationContext(), "두번째 탭", Toast.LENGTH_SHORT).show();
                         getSupportFragmentManager().beginTransaction().replace(R.id.bottom_container, achievementFrag).commit();
                         return true;
-                    case R.id.tab3:
+
+                    case R.id.tab4: // 마이페이지 선택시 마이페이지 fragment로 넘어감
                         Toast.makeText(getApplicationContext(), "세번째 탭", Toast.LENGTH_SHORT).show();
                         getSupportFragmentManager().beginTransaction().replace(R.id.bottom_container, mylevelFrag).commit();
                         return true;
