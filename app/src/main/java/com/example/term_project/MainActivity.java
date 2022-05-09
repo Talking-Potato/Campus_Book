@@ -9,19 +9,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class BottomActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
-    Mylevel mylevelFrag;
-    Achievement achievementFrag;
+    MyLevelFragment mylevelFrag;
+    AchievementFragment achievementFrag;
 //    Fragment3 fragment3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.bottom_activity);
+        setContentView(R.layout.activity_main);
 
-        mylevelFrag = new Mylevel();
-        achievementFrag = new Achievement();
+        mylevelFrag = new MyLevelFragment();
+        achievementFrag = new AchievementFragment();
 //        fragment3 = new Fragment3();
 
         getSupportFragmentManager().beginTransaction().replace(R.id.bottom_container, mylevelFrag).commit();

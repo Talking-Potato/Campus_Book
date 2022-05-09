@@ -2,9 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.term_project">
 
-    //인터넷 권한 허용
-    <uses-permission android:name="android.permission.INTERNET"/>
-
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -18,9 +17,6 @@
             android:value="AIzaSyCgG5Pn0lVwxHaIe-q0LsVpbTkp_jfkA-o"/>
         <activity
             android:name=".LoginActivity"
-            android:exported="true" />
-        <activity
-            android:name=".BottomActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,7 +28,7 @@
         </activity>
         <activity android:name=".HomeActivity">
         </activity>
-        <activity android:name=".activity_main_screen">
+        <activity android:name=".MapFragment">
         </activity>
     </application>
 
