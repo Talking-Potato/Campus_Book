@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingTop="20dp">
     <!-- 업적 -->
     <TextView
         android:id="@+id/my_level"
@@ -25,7 +26,28 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_gravity="center"
-        android:layout_marginTop="47dp"
+        android:layout_marginTop="20dp"
         android:background="@color/black"
         tools:ignore="MissingConstraints" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp">
+        <ImageView
+            android:id="@+id/levelAvatar"
+            android:layout_width="200dp"
+            android:layout_height="240dp"
+            android:src="@drawable/level22" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="당신은\n22학번\n입니다!"
+            android:textSize="30dp"
+            android:textColor="@color/black"
+            android:layout_gravity="right"
+            android:gravity="center"/>
+    </LinearLayout>
+
 </LinearLayout>

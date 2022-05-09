@@ -19,13 +19,14 @@
             android:value="AIzaSyCgG5Pn0lVwxHaIe-q0LsVpbTkp_jfkA-o"/>
         <activity
             android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".ScanQR">
         </activity>
         <activity android:name="com.journeyapps.barcodescanner.CaptureActivity"
             android:screenOrientation="fullSensor"

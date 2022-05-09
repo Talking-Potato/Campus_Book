@@ -4,16 +4,22 @@
     <item
         android:id="@+id/tab1"
         android:enabled="true"
+        android:icon="@android:drawable/ic_menu_mapmode"
+        android:title="지도"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/tab2"
+        android:enabled="true"
         android:icon="@android:drawable/ic_menu_camera"
         android:title="QR찍기"
         app:showAsAction="ifRoom"/>
     <item
-        android:id="@+id/tab2"
+        android:id="@+id/tab3"
         android:icon="@android:drawable/ic_menu_compass"
         android:title="업적"
         app:showAsAction="ifRoom"/>
     <item
-        android:id="@+id/tab3"
+        android:id="@+id/tab4"
         android:icon="@android:drawable/star_on"
         android:title="My Level"
         app:showAsAction="ifRoom"/>
