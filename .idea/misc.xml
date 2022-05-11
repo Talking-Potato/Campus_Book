@@ -3,6 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/JIMINFILES/Univ Docs/3/Mobile Programming/Campus_Book/app/src/main/res/drawable/bottom_navigation_color.xml" value="0.1535" />
+        <entry key="..\:/JIMINFILES/Univ Docs/3/Mobile Programming/Campus_Book/app/src/main/res/layout/achievements.xml" value="0.115625" />
+        <entry key="..\:/JIMINFILES/Univ Docs/3/Mobile Programming/Campus_Book/app/src/main/res/layout/activitiy_main_screen.xml" value="0.152" />
+        <entry key="..\:/JIMINFILES/Univ Docs/3/Mobile Programming/Campus_Book/app/src/main/res/layout/activity_home.xml" value="0.2" />
+        <entry key="..\:/JIMINFILES/Univ Docs/3/Mobile Programming/Campus_Book/app/src/main/res/layout/activity_main.xml" value="0.1248396750748183" />
+        <entry key="..\:/JIMINFILES/Univ Docs/3/Mobile Programming/Campus_Book/app/src/main/res/layout/activity_qr.xml" value="0.1248396750748183" />
+        <entry key="..\:/JIMINFILES/Univ Docs/3/Mobile Programming/Campus_Book/app/src/main/res/layout/bottom_activity.xml" value="0.6" />
+        <entry key="..\:/JIMINFILES/Univ Docs/3/Mobile Programming/Campus_Book/app/src/main/res/layout/fragment_achievement.xml" value="0.21248396750748183" />
+        <entry key="..\:/JIMINFILES/Univ Docs/3/Mobile Programming/Campus_Book/app/src/main/res/layout/fragment_map.xml" value="0.10384454659423319" />
+        <entry key="..\:/JIMINFILES/Univ Docs/3/Mobile Programming/Campus_Book/app/src/main/res/layout/fragment_mylevel.xml" value="0.21248396750748183" />
+        <entry key="..\:/JIMINFILES/Univ Docs/3/Mobile Programming/Campus_Book/app/src/main/res/layout/menu_bottom.xml" value="0.115625" />
+        <entry key="..\:/JIMINFILES/Univ Docs/3/Mobile Programming/Campus_Book/app/src/main/res/layout/my_level.xml" value="0.1375" />
+        <entry key="..\:/JIMINFILES/Univ Docs/3/Mobile Programming/Campus_Book/app/src/main/res/menu/menu_bottom.xml" value="0.72" />
+        <entry key="..\:/Users/ChungHyunwoo/AndroidStudio/Campus_Book/app/src/main/res/layout/activity_login.xml" value="0.333786231884058" />
+        <entry key="..\:/Users/ChungHyunwoo/AndroidStudio/Campus_Book/app/src/main/res/layout/activity_signup.xml" value="0.2712765957446808" />
         <entry key="..\:/Users/ChungHyunwoo/OneDrive - gachon.ac.kr/AndroidStudioProjects/3-1_Mobile_Programming/Term_Project/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.5703125" />
         <entry key="..\:/Users/ChungHyunwoo/OneDrive - gachon.ac.kr/AndroidStudioProjects/3-1_Mobile_Programming/Term_Project/app/src/main/res/drawable/back.xml" value="0.4925" />
         <entry key="..\:/Users/ChungHyunwoo/OneDrive - gachon.ac.kr/AndroidStudioProjects/3-1_Mobile_Programming/Term_Project/app/src/main/res/drawable/login_bar.xml" value="0.5703125" />
@@ -26,7 +41,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

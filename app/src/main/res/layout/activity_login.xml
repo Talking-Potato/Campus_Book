@@ -35,6 +35,7 @@
         android:layout_marginBottom="20dp"
         android:background="@drawable/login_box"
         android:hint="Password"
+        android:inputType="textPassword"
         android:minHeight="48dp"
         android:paddingHorizontal="10dp" />
 
