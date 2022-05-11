@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     MyLevelFragment mylevelFrag;
     AchievementFragment achievementFrag;
-//    ScanQRFragment qrFrag;
+    ScanQRFragment qrFrag;
 //    Fragment3 fragment3;
 
     @Override
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         mylevelFrag = new MyLevelFragment();
         achievementFrag = new AchievementFragment();
-//        qrFrag = new ScanQRFragment();
+        qrFrag = new ScanQRFragment();
 //        fragment3 = new Fragment3();
 
         getSupportFragmentManager().beginTransaction().replace(R.id.bottom_container, mylevelFrag).commit();
@@ -39,10 +39,10 @@ public class MainActivity extends AppCompatActivity {
 //                        getSupportFragmentManager().beginTransaction().replace(R.id.bottom_container, mylevelFrag).commit();
 //                        return true;
 
-//                    case R.id.tab2: // QR 선택했을때 QR fragemnt로 넘어감
-//                        Toast.makeText(getApplicationContext(), "두번째 탭", Toast.LENGTH_SHORT).show();
-//                        getSupportFragmentManager().beginTransaction().replace(R.id.bottom_container, qrFrag).commit();
-//                        return true;
+                    case R.id.tab2: // QR 선택했을때 QR fragemnt로 넘어감
+                        Toast.makeText(getApplicationContext(), "두번째 탭", Toast.LENGTH_SHORT).show();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.bottom_container, qrFrag).commit();
+                        return true;
 
                     case R.id.tab3: // 업적 선택시 업적 fragment로 넘어감
                         Toast.makeText(getApplicationContext(), "두번째 탭", Toast.LENGTH_SHORT).show();

@@ -1,68 +1,61 @@
 package com.example.term_project;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
-import androidx.appcompat.app.AppCompatActivity;
+import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import android.widget.Button;
 import android.widget.Toast;
 
-import com.google.zxing.integration.android.IntentIntegrator;
-import com.google.zxing.integration.android.IntentResult;
-
 public class ScanQRFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    private Context context;
+    Button scanQRBtn;
 
     public ScanQRFragment() {
         // Required empty public constructor
     }
-
+    // TODO: Rename and change types and number of parameters
     public static ScanQRFragment newInstance(String param1, String param2) {
         ScanQRFragment fragment = new ScanQRFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
-    private IntentIntegrator qrScan;
+
     @Override
-    public void onCreate(Bundle savedInstanceState){
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        qrScan = new IntentIntegrator(this);
-//        qrScan.setOrientationLocked(false);//default:세로모드인데 휴대폰 방향에 따라 가로, 세로로 자동 변경
-//        qrScan.initiateScan();
+
     }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_scanqr ,container, false);
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.activity_qr, container, false);
+        scanQRBtn = (Button)rootView.findViewById(R.id.scanQR);
+        scanQRBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), ScanQRActivity.class);
+                startActivityForResult(intent, 101);
+            }
+        });
+        return rootView;
     }
-//    @Override
-//    public void onActivityResult(int requestCode, int resultCode, Intent data){
-//        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
-//        if(result!=null){
-//            if(result.getContents()==null){ //content가 없을때
-//                Toast.makeText(this, "Cancelled", Toast.LENGTH_LONG).show();
-//            }
-//            else{   //content가 있을때
-//                Toast.makeText(this, "Scanned: " + result.getContents(), Toast.LENGTH_LONG).show();
-//            }
-//        }
-//        else{
-//            super.onActivityResult(requestCode,resultCode,data);
-//        }
-//    }
 
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        //getActivity();
+        if(requestCode == 101 & resultCode ==Activity.RESULT_OK){
+            Toast.makeText(context,"QR", Toast.LENGTH_LONG).show();
+        }
+    }
 }
