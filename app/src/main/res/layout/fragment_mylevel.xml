@@ -39,67 +39,55 @@
             android:textSize="30dp" />
     </LinearLayout>
 
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <ScrollView
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="80dp"
+                android:background="@drawable/login_box"
+                android:gravity="center"
+                android:text="Lv1. 파릇 파릇 새내기\n0=&lt;Exp&lt;250"
+                android:textSize="20sp" />
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/login_box"
+                android:gravity="center"
+                android:text="Lv2. 나도 이제 헌내기?\n250&lt;=Exp&lt;750"
+                android:textSize="20sp" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:background="@drawable/login_box"
-                        android:gravity="center"
-                        android:text="Lv1. 파릇 파릇 새내기\n0=<Exp<250"
-                        android:textSize="20sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/login_box"
+                android:gravity="center"
+                android:text="Lv3. ㅡ꼰ㅡ\n750&lt;=Exp&lt;1500"
+                android:textSize="20sp" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:background="@drawable/login_box"
-                        android:gravity="center"
-                        android:text="Lv2. 나도 이제 헌내기?\n250<=Exp<750"
-                        android:textSize="20sp" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/login_box"
+                android:gravity="center"
+                android:text="Lv4. 졸작취준토익토플\n1500&lt;=Exp&lt;2500"
+                android:textSize="20sp" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:background="@drawable/login_box"
-                        android:gravity="center"
-                        android:text="Lv3. ㅡ꼰ㅡ\n750<=Exp<1500"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:background="@drawable/login_box"
-                        android:gravity="center"
-                        android:text="Lv4. 졸작취준토익토플\n1500<=Exp<2500"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        android:background="@drawable/login_box"
-                        android:gravity="center"
-                        android:text="Lv5. --.. -.. ...- -... -... . .-..\n2500<=Exp"
-                        android:textSize="20sp" />
-
-                </LinearLayout>
-
-            </ScrollView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/login_box"
+                android:gravity="center"
+                android:text="Lv5. --.. -.. ...- -... -... . .-..\n2500&lt;=Exp"
+                android:textSize="20sp" />
 
         </LinearLayout>
     </ScrollView>
