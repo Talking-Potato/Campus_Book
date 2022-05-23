@@ -17,7 +17,8 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyA3DKpqxfTR_m0c2o2Q0MUL8vcUqVhnmOY" />
+            // 성구 키값
+            android:value="AIzaSyCbp04AZZ_KEoDoDF1ZNrfHg-NketDJZ0g" />
 
         <activity
             android:name=".LoginActivity"
@@ -36,10 +37,6 @@
         <activity android:name=".HomeActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".ScanQRActivity"/>
-        <activity
-            android:name="com.journeyapps.barcodescanner.CaptureActivity"
-            android:screenOrientation="fullSensor"
-            tools:replace="screenOrientation"></activity>
     </application>
 
 </manifest>
