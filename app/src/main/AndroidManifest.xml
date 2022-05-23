@@ -17,8 +17,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            // 성구 키값
-            android:value="AIzaSyCbp04AZZ_KEoDoDF1ZNrfHg-NketDJZ0g" />
+            android:value="AIzaSyCbp04AZZ_KEoDoDF1ZNrfHg-NketDJZ0g" /> <!--// 성구 키값-->
 
         <activity
             android:name=".LoginActivity"
