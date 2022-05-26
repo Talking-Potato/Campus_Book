@@ -30,6 +30,7 @@
         android:layout_marginEnd="0dp"
         android:orientation="horizontal">
 
+        <!--        https://show-me-the-money.tistory.com/entry/Circular-Progress-bar-%EB%A7%8C%EB%93%A4%EA%B8%B0-->
         <ImageView
             android:id="@+id/levelAvatar"
             android:layout_width="200dp"
@@ -47,11 +48,11 @@
             android:max="120"
             android:progress="20"
             android:progressDrawable="@drawable/progressbar_circular" />
-        <!--        https://show-me-the-money.tistory.com/entry/Circular-Progress-bar-%EB%A7%8C%EB%93%A4%EA%B8%B0-->
+
         <TextView
             android:id="@+id/myLevel_description"
-            android:layout_width="155dp"
-            android:layout_height="232dp"
+            android:layout_width="164dp"
+            android:layout_height="197dp"
             android:layout_gravity="right"
             android:layout_marginLeft="6dp"
             android:layout_toRightOf="@+id/levelAvatar"
@@ -59,19 +60,26 @@
             android:text="당신은\n22학번\n입니다!"
             android:textColor="@color/black"
             android:textSize="30dp" />
-        <Button
-            android:id="@+id/lowerExp"
+
+        <TextView
+            android:id="@+id/usableExpText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/myLevel_description"
-            android:layout_toLeftOf="@id/addExp"
-            android:text="경험치 뺴기" />
+            android:layout_below="@id/addExp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="21dp"
+            android:text="사용 가능한 EXP : 0"
+            android:textSize="17dp" />
+
         <Button
             android:id="@+id/addExp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/myLevel_description"
             android:layout_alignParentRight="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="39dp"
             android:text="경험치 더하기" />
     </RelativeLayout>
 
