@@ -1,4 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<rotate
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromDegrees="270"
+    android:toDegrees="270">
 
-</selector>
+    <shape
+        android:innerRadiusRatio="2.5"
+        android:shape="ring"
+        android:thickness="12dp"
+        android:useLevel="true"
+        >
+
+        <gradient
+            android:angle="0"
+            android:endColor="@color/progressbar"
+            android:centerColor="@color/progressbar"
+            android:startColor="@color/progressbar"
+            android:type="sweep"
+            android:useLevel="false"/>
+
+    </shape>
+
+</rotate>

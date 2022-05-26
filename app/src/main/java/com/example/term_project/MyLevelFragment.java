@@ -4,9 +4,12 @@ import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ProgressBar;
+import android.widget.Button;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +26,11 @@ public class MyLevelFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    ProgressBar expBar;
+    Button addBtn, lowerBtn;
+    private int expVal = 0;
+
+
 
     public MyLevelFragment() {
         // Required empty public constructor
@@ -49,16 +57,46 @@ public class MyLevelFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_mylevel, container, false);
+        ViewGroup rootView = (ViewGroup ) inflater.inflate(R.layout.fragment_mylevel, container, false);
+
+        expBar = (ProgressBar) rootView.findViewById(R.id.expBar);
+        addBtn = (Button) rootView.findViewById(R.id.addExp);
+        lowerBtn = (Button) rootView.findViewById(R.id.lowerExp);
+
+        addBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                expVal = expBar.getProgress();
+//                Log.d("EXP","EXP progresas " + expVal);
+                if(expVal < 120){
+                    expVal = expVal + 10;
+                }
+                expBar.setProgress(expVal);
+            }
+        });
+
+        lowerBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                expVal = expBar.getProgress();
+//                Log.d("EXP","EXP progresas " + expVal);
+                if(expVal > 0){
+                    expVal = expVal - 10;
+                }
+                expBar.setProgress(expVal);
+            }
+        });
+
+        return rootView;
     }
+
+
+
 }
