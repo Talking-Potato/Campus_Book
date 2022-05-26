@@ -1,26 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.term_project">
+        xmlns:tools="http://schemas.android.com/tools"
+        package="com.example.term_project">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
-        android:allowBackup="true"
-        android:hardwareAccelerated="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.Term_Project">
+            android:allowBackup="true"
+            android:hardwareAccelerated="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/Theme.Term_Project">
+        <activity
+                android:name=".AchievementActivity"
+                android:exported="false" />
 
         <meta-data
-            android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCbp04AZZ_KEoDoDF1ZNrfHg-NketDJZ0g" /> <!-- // 성구 키값 -->
+
+
+                android:name="com.google.android.geo.API_KEY"
+                android:value="AIzaSyCbp04AZZ_KEoDoDF1ZNrfHg-NketDJZ0g" /> <!-- // 성구 키값 -->
         <activity
-            android:name=".MyLevelActivity"
-            android:exported="true">
+                android:name=".LoginActivity"
+                android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,12 +35,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.journeyapps.barcodescanner.CaptureActivity"
-            android:screenOrientation="fullSensor"
-            tools:replace="screenOrientation" />
+                android:name="com.journeyapps.barcodescanner.CaptureActivity"
+                android:screenOrientation="fullSensor"
+                tools:replace="screenOrientation" />
         <activity android:name=".SignupActivity" />
         <activity android:name=".HomeActivity" />
-        <activity android:name=".MainActivity" />
+
+        <activity android:name=".MapActivity" />
+        <activity android:name=".MyLevelActivity" />
+
         <activity android:name=".ScanQRActivity" />
     </application>
 

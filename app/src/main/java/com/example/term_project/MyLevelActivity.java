@@ -1,5 +1,6 @@
 package com.example.term_project;
 
+
 import android.animation.ValueAnimator;
 import android.content.Context;
 import android.media.Image;
@@ -19,6 +20,9 @@ import android.widget.ProgressBar;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+
+
 import tyrantgit.explosionfield.ExplosionField;
 
 public class MyLevelActivity extends AppCompatActivity {
@@ -26,7 +30,9 @@ public class MyLevelActivity extends AppCompatActivity {
     ProgressBar expBar;
     Button addBtn, lowerBtn;
     ImageView avatar;
+
     TextView myLevelText, myLevelDescriptionText, usableExpText;
+
     TextView level1TV, level2TV, level3TV, level4TV, level5TV;
 
     //폭발 효과 object
@@ -36,8 +42,10 @@ public class MyLevelActivity extends AppCompatActivity {
     private int myLevel = 1;
     //나의 현재 경험치
     private int myExp = 0;
+
     //더할 수 있는 경험치 양
     private int usableExp = 1000;
+
     //경험치바의 현재 경험치량을 나타낼 값
     private int expVal = 0;
     //미리 설정된 레벨에 따른 경험치 값들
@@ -64,6 +72,7 @@ public class MyLevelActivity extends AppCompatActivity {
         myLevelDescriptionText = (TextView) findViewById(R.id.myLevel_description) ;
         usableExpText = (TextView) findViewById(R.id.usableExpText);
 
+
         level1TV = (TextView) findViewById(R.id.level1TV) ;
         level2TV = (TextView) findViewById(R.id.level2TV) ;
         level3TV = (TextView) findViewById(R.id.level3TV) ;
@@ -79,15 +88,18 @@ public class MyLevelActivity extends AppCompatActivity {
         // 내 레벨에 맞는 경험치 최대치 설정
         setLevel(myLevel);
 
+
         // 내가 추가할 수 있는 경험치양 불러오기
         usableExp = 2000;
         usableExpText.setText("사용 가능한 EXP : " + usableExp);
+
 
         addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 expVal = expBar.getProgress();
 //                Log.d("EXP","EXP progresas " + expVal);
+
                 int clickExp = 20; // 버튼 클릭당 증가하는 경험치
                 if(usableExp > 0) {//사용가능한 EXP가 남아있다면
                         for(int i = 0; i < clickExp; i++) {
@@ -112,7 +124,6 @@ public class MyLevelActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
     private void setLevel(int level){
         //현재 레벨 상태에 따라 최대 exp 세팅

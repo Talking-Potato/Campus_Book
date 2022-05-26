@@ -1,71 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".LoginActivity">
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".LoginActivity">
 
 
     <ImageView
-        android:layout_width="240dp"
-        android:layout_height="240dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="60dp"
-        android:src="@drawable/campus_book_240" />
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/campus_book_240" />
 
     <EditText
-        android:id="@+id/loginID"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/login_box"
-        android:hint="ID"
-        android:minHeight="48dp"
-        android:paddingHorizontal="10dp" />
+            android:id="@+id/editLoginID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/login_box"
+            android:text="potato@gachon.ac.kr"
+            android:hint="ID"
+            android:minHeight="48dp"
+            android:paddingHorizontal="10dp" />
 
     <EditText
-        android:id="@+id/loginPW"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginHorizontal="30dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/login_box"
-        android:hint="Password"
-        android:inputType="textPassword"
-        android:minHeight="48dp"
-        android:paddingHorizontal="10dp" />
+            android:id="@+id/editLoginPW"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="30dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/login_box"
+            android:text="123456"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:minHeight="48dp"
+            android:paddingHorizontal="10dp" />
 
     <Button
-        android:id="@+id/loginButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30dp"
-        android:background="@drawable/login_login"
-        android:text="Log In" />
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30dp"
+            android:background="@drawable/login_login"
+            android:text="Log In" />
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:gravity="center"
-        android:orientation="horizontal">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:orientation="horizontal">
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Don't have an account?" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't have an account?" />
 
         <Button
-            android:id="@+id/signUp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#00FF0000"
-            android:text="Sign Up"
-            android:textColor="#661A589B" />
+                android:id="@+id/signUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FF0000"
+                android:text="Sign Up"
+                android:textColor="#661A589B" />
     </LinearLayout>
 
 </LinearLayout>
