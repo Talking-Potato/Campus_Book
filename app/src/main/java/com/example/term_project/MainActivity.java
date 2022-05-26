@@ -45,12 +45,12 @@ public class MainActivity extends AppCompatActivity {
                         return true;
 
                     case R.id.tab3: // 업적 선택시 업적 fragment로 넘어감
-                        Toast.makeText(getApplicationContext(), "두번째 탭", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "세번째 탭", Toast.LENGTH_SHORT).show();
                         getSupportFragmentManager().beginTransaction().replace(R.id.bottom_container, achievementFrag).commit();
                         return true;
 
                     case R.id.tab4: // 마이페이지 선택시 마이페이지 fragment로 넘어감
-                        Toast.makeText(getApplicationContext(), "세번째 탭", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), "네번째 탭", Toast.LENGTH_SHORT).show();
                         getSupportFragmentManager().beginTransaction().replace(R.id.bottom_container, mylevelFrag).commit();
                         return true;
                 }
