@@ -4,15 +4,19 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/JIMINFILES/Univ Docs/3/Mobile Programming/Campus_Book/app/src/main/res/drawable/bottom_navigation_color.xml" value="0.1535" />
+        <entry key="..\:/JIMINFILES/Univ Docs/3/Mobile Programming/Campus_Book/app/src/main/res/drawable/progressbar_circular.xml" value="0.1" />
+        <entry key="..\:/JIMINFILES/Univ Docs/3/Mobile Programming/Campus_Book/app/src/main/res/drawable/progressbar_cirvular.xml" value="0.1" />
         <entry key="..\:/JIMINFILES/Univ Docs/3/Mobile Programming/Campus_Book/app/src/main/res/layout/achievements.xml" value="0.115625" />
         <entry key="..\:/JIMINFILES/Univ Docs/3/Mobile Programming/Campus_Book/app/src/main/res/layout/activitiy_main_screen.xml" value="0.152" />
         <entry key="..\:/JIMINFILES/Univ Docs/3/Mobile Programming/Campus_Book/app/src/main/res/layout/activity_home.xml" value="0.2" />
         <entry key="..\:/JIMINFILES/Univ Docs/3/Mobile Programming/Campus_Book/app/src/main/res/layout/activity_main.xml" value="0.1248396750748183" />
+        <entry key="..\:/JIMINFILES/Univ Docs/3/Mobile Programming/Campus_Book/app/src/main/res/layout/activity_my_level.xml" value="0.264" />
         <entry key="..\:/JIMINFILES/Univ Docs/3/Mobile Programming/Campus_Book/app/src/main/res/layout/activity_qr.xml" value="0.1248396750748183" />
         <entry key="..\:/JIMINFILES/Univ Docs/3/Mobile Programming/Campus_Book/app/src/main/res/layout/bottom_activity.xml" value="0.6" />
         <entry key="..\:/JIMINFILES/Univ Docs/3/Mobile Programming/Campus_Book/app/src/main/res/layout/fragment_achievement.xml" value="0.21248396750748183" />
         <entry key="..\:/JIMINFILES/Univ Docs/3/Mobile Programming/Campus_Book/app/src/main/res/layout/fragment_map.xml" value="0.10384454659423319" />
         <entry key="..\:/JIMINFILES/Univ Docs/3/Mobile Programming/Campus_Book/app/src/main/res/layout/fragment_mylevel.xml" value="0.21248396750748183" />
+        <entry key="..\:/JIMINFILES/Univ Docs/3/Mobile Programming/Campus_Book/app/src/main/res/layout/fragment_scanqr.xml" value="0.115625" />
         <entry key="..\:/JIMINFILES/Univ Docs/3/Mobile Programming/Campus_Book/app/src/main/res/layout/menu_bottom.xml" value="0.115625" />
         <entry key="..\:/JIMINFILES/Univ Docs/3/Mobile Programming/Campus_Book/app/src/main/res/layout/my_level.xml" value="0.1375" />
         <entry key="..\:/JIMINFILES/Univ Docs/3/Mobile Programming/Campus_Book/app/src/main/res/menu/menu_bottom.xml" value="0.72" />
@@ -52,6 +56,15 @@
         <entry key="app/src/main/res/layout/activity_my_level.xml" value="0.27291666666666664" />
         <entry key="app/src/main/res/layout/fragment_achievement_temp.xml" value="0.3333333333333333" />
         <entry key="app/src/main/res/layout/listview_achiev.xml" value="0.33229166666666665" />
+        <entry key="app/src/main/res/drawable/progressbar_circular.xml" value="0.222" />
+        <entry key="app/src/main/res/drawable/progressbar_circularbg.xml" value="0.222" />
+        <entry key="app/src/main/res/layout/activity_achievement.xml" value="0.31927083333333334" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.16210739614994935" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3333333333333333" />
+        <entry key="app/src/main/res/layout/activity_map.xml" value="0.22760416666666666" />
+        <entry key="app/src/main/res/layout/activity_my_level.xml" value="0.27291666666666664" />
+        <entry key="app/src/main/res/layout/fragment_achievement_temp.xml" value="0.3333333333333333" />
       </map>
     </option>
   </component>

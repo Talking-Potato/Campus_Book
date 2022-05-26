@@ -5,7 +5,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:paddingTop="20dp">
-
     <!-- 업적 -->
     <TextView
         android:id="@+id/some_id"
@@ -17,118 +16,114 @@
         android:textAppearance="@style/page_title"
         tools:ignore="MissingConstraints" />
 
-    <ListView
-            android:id="@+id/achivList"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
-<!--    <ScrollView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent">-->
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-<!--        <LinearLayout-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:orientation="vertical">-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center"
+                android:text="매장/건물 최초 방문 (일 최대 각 1회 / gps 거리 10m이내 20분 이상)"
+                android:textSize="20sp"
+                android:background="@drawable/login_box" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center"
+                android:text="매장/건물 10회 방문+20"
+                android:textSize="20sp"
+                android:background="@drawable/login_box"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center"
+                android:text="매장/건물 30회 방문"
+                android:textSize="20sp"
+                android:background="@drawable/login_box"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center"
+                android:text="매장/건물 50회 방문"
+                android:textSize="20sp"
+                android:background="@drawable/login_box"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center"
+                android:text="매장/건물 100회 방문"
+                android:textSize="20sp"
+                android:background="@drawable/login_box"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center"
+                android:text="무당이 최초 탑승(일 최대 2회)"
+                android:textSize="20sp"
+                android:background="@drawable/login_box"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center"
+                android:text="무당이 10회 탑승"
+                android:textSize="20sp"
+                android:background="@drawable/login_box"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center"
+                android:text="무당이 50회 탑승"
+                android:textSize="20sp"
+                android:background="@drawable/login_box"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center"
+                android:text="무당이 100회 탑승"
+                android:textSize="20sp"
+                android:background="@drawable/login_box"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center"
+                android:text="무당이 300회 탑승"
+                android:textSize="20sp"
+                android:background="@drawable/login_box"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center"
+                android:text="메디컬 캠퍼스 최초 방문"
+                android:textSize="20sp"
+                android:background="@drawable/login_box"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center"
+                android:text="글로벌 캠퍼스 최초 방문"
+                android:textSize="20sp"
+                android:background="@drawable/login_box"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center"
+                android:text="교내 머문시간 시간"
+                android:textSize="20sp"
+                android:background="@drawable/login_box"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:gravity="center"
+                android:text="게시글/리뷰 작성시 (일 최대 2회)"
+                android:textSize="20sp"
+                android:background="@drawable/login_box"/>
 
-<!--            <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="80dp"-->
-<!--                android:gravity="center"-->
-<!--                android:text="매장/건물 최초 방문 (일 최대 각 1회 / gps 거리 10m이내 20분 이상)"-->
-<!--                android:textSize="20sp"-->
-<!--                android:background="@drawable/login_box" />-->
-<!--            <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="80dp"-->
-<!--                android:gravity="center"-->
-<!--                android:text="매장/건물 10회 방문+20"-->
-<!--                android:textSize="20sp"-->
-<!--                android:background="@drawable/login_box"/>-->
-<!--            <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="80dp"-->
-<!--                android:gravity="center"-->
-<!--                android:text="매장/건물 30회 방문"-->
-<!--                android:textSize="20sp"-->
-<!--                android:background="@drawable/login_box"/>-->
-<!--            <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="80dp"-->
-<!--                android:gravity="center"-->
-<!--                android:text="매장/건물 50회 방문"-->
-<!--                android:textSize="20sp"-->
-<!--                android:background="@drawable/login_box"/>-->
-<!--            <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="80dp"-->
-<!--                android:gravity="center"-->
-<!--                android:text="매장/건물 100회 방문"-->
-<!--                android:textSize="20sp"-->
-<!--                android:background="@drawable/login_box"/>-->
-<!--            <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="80dp"-->
-<!--                android:gravity="center"-->
-<!--                android:text="무당이 최초 탑승(일 최대 2회)"-->
-<!--                android:textSize="20sp"-->
-<!--                android:background="@drawable/login_box"/>-->
-<!--            <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="80dp"-->
-<!--                android:gravity="center"-->
-<!--                android:text="무당이 10회 탑승"-->
-<!--                android:textSize="20sp"-->
-<!--                android:background="@drawable/login_box"/>-->
-<!--            <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="80dp"-->
-<!--                android:gravity="center"-->
-<!--                android:text="무당이 50회 탑승"-->
-<!--                android:textSize="20sp"-->
-<!--                android:background="@drawable/login_box"/>-->
-<!--            <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="80dp"-->
-<!--                android:gravity="center"-->
-<!--                android:text="무당이 100회 탑승"-->
-<!--                android:textSize="20sp"-->
-<!--                android:background="@drawable/login_box"/>-->
-<!--            <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="80dp"-->
-<!--                android:gravity="center"-->
-<!--                android:text="무당이 300회 탑승"-->
-<!--                android:textSize="20sp"-->
-<!--                android:background="@drawable/login_box"/>-->
-<!--            <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="80dp"-->
-<!--                android:gravity="center"-->
-<!--                android:text="메디컬 캠퍼스 최초 방문"-->
-<!--                android:textSize="20sp"-->
-<!--                android:background="@drawable/login_box"/>-->
-<!--            <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="80dp"-->
-<!--                android:gravity="center"-->
-<!--                android:text="글로벌 캠퍼스 최초 방문"-->
-<!--                android:textSize="20sp"-->
-<!--                android:background="@drawable/login_box"/>-->
-<!--            <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="80dp"-->
-<!--                android:gravity="center"-->
-<!--                android:text="교내 머문시간 시간"-->
-<!--                android:textSize="20sp"-->
-<!--                android:background="@drawable/login_box"/>-->
-<!--            <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="80dp"-->
-<!--                android:gravity="center"-->
-<!--                android:text="게시글/리뷰 작성시 (일 최대 2회)"-->
-<!--                android:textSize="20sp"-->
-<!--                android:background="@drawable/login_box"/>-->
-
-<!--        </LinearLayout>-->
-<!--    </ScrollView>-->
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

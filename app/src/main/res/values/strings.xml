@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">캠퍼스도감</string>
     <string name="achievement_title">업적</string>
+
     <string name="my_level_title">My Level</string>
 
     <string name="level1Title">My Level : 1</string>
