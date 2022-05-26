@@ -8,13 +8,14 @@
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
-            android:allowBackup="true"
+            android:allowBackup="false"
             android:hardwareAccelerated="true"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/app_name"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
-            android:theme="@style/Theme.Term_Project">
+            android:theme="@style/Theme.Term_Project"
+            tools:replace="android:allowBackup">
         <activity
                 android:name=".AchievementActivity"
                 android:exported="false" />
