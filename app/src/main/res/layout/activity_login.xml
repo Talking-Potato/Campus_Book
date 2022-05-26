@@ -15,7 +15,7 @@
         android:src="@drawable/campus_book_240" />
 
     <EditText
-        android:id="@+id/loginID"
+        android:id="@+id/editLoginID"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
@@ -27,7 +27,7 @@
         android:paddingHorizontal="10dp" />
 
     <EditText
-        android:id="@+id/loginPW"
+        android:id="@+id/editLoginPW"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
