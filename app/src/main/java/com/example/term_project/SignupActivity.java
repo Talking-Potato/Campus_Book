@@ -1,6 +1,5 @@
 package com.example.term_project;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -80,7 +79,7 @@ public class SignupActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // 회원가입 성공시
-                            SignupData signupData = new SignupData(name, schoolID);
+                            SignUpData signupData = new SignUpData(name, schoolID);
                             databaseReference.push().setValue(signupData);
                             Toast.makeText(SignupActivity.this, "회원가입 성공", Toast.LENGTH_SHORT).show();
 

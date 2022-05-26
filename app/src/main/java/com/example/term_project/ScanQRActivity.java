@@ -1,6 +1,7 @@
 package com.example.term_project;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -11,6 +12,7 @@ import com.google.zxing.integration.android.IntentResult;
 
 public class ScanQRActivity extends AppCompatActivity {
     private IntentIntegrator qrScan;
+    private String uri;
 
     @Override
     public void onCreate(Bundle savedInstanceState){
@@ -28,9 +30,13 @@ public class ScanQRActivity extends AppCompatActivity {
         if(result!=null){
             if(result.getContents()==null){ //content 가 없을때
                 Toast.makeText(this, "Cancelled", Toast.LENGTH_LONG).show();
+                finish();
             }
             else{   //content 가 있을때
                 Toast.makeText(this, "Scanned: " + result.getContents(), Toast.LENGTH_LONG).show();
+                uri = result.getContents();
+                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
+                startActivity(intent);
             }
         }
         else{

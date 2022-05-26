@@ -7,4 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="progressbar">#FF306E</color>
+    <color name="progressbar_off">#E2E2E2</color>
+    <color name="level1Color">#c6d8e8</color>
+    <color name="level2Color">#e4dfed</color>
+    <color name="level3Color">#78d69c</color>
+    <color name="level4Color">#ce74b4</color>
+    <color name="level5Color">#584d4e</color>
 </resources>

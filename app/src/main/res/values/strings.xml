@@ -2,6 +2,22 @@
     <string name="app_name">캠퍼스도감</string>
     <string name="achievement_title">업적</string>
     <string name="my_level_title">My Level</string>
+
+    <string name="level1Title">My Level : 1</string>
+    <string name="level1Name">Lv1. 파릇 파릇 새내기</string>
+    <string name="level1Description">당신은\nLv1. 파릇 파릇 새내기\n입니다</string>
+    <string name="level2Title">My Level : 2</string>
+    <string name="level2Name">Lv2. 나도 이제 헌내기</string>
+    <string name="level2Description">당신은\nLv2. 나도 이제 헌내기\n입니다</string>
+    <string name="level3Title">My Level : 3</string>
+    <string name="level3Name">Lv3. ㅡ꼰ㅡ</string>
+    <string name="level3Description">당신은\nLv3. ㅡ꼰ㅡ\n입니다</string>
+    <string name="level4Title">My Level : 4</string>
+    <string name="level4Name">Lv4. 졸작취준토익토플</string>
+    <string name="level4Description">당신은\nLv4. 졸작취준토익토플\n입니다</string>
+    <string name="level5Title">My Level : 5</string>
+    <string name="level5Name">Lv5. --.. -.. ...- -... -... . .-..</string>
+    <string name="level5Description">당신은\nLv5. --.. -.. ...- -... -... . .-..\n입니다</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
