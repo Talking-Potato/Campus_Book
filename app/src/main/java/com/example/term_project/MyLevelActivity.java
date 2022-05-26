@@ -124,7 +124,7 @@ public class MyLevelActivity extends AppCompatActivity {
                 avatar.setImageResource(R.drawable.level1);
                 myLevelText.setText(R.string.level1Title);
                 myLevelDescriptionText.setText(R.string.level1Description);
-                level1TV.setBackgroundColor(getResources().getColor(R.color.level1Color));
+                setLevelColor(level);
 
                 break;
             case 2 :
@@ -133,8 +133,7 @@ public class MyLevelActivity extends AppCompatActivity {
                 expBar.setProgress(myExp);
                 myLevelText.setText(R.string.level2Title);
                 myLevelDescriptionText.setText(R.string.level2Description);
-                level2TV.setVisibility(View.VISIBLE);
-                level2TV.setBackgroundColor(getResources().getColor(R.color.level2Color));
+                setLevelColor(level);
                 mHandler.postDelayed(new Runnable() {
                     public void run() {
                         avatar.setImageResource(R.drawable.level2);
@@ -150,8 +149,7 @@ public class MyLevelActivity extends AppCompatActivity {
                 avatar.setImageResource(R.drawable.level3);
                 myLevelText.setText(R.string.level3Title);
                 myLevelDescriptionText.setText(R.string.level3Description);
-                level3TV.setVisibility(View.VISIBLE);
-                level3TV.setBackgroundColor(getResources().getColor(R.color.level3Color));
+                setLevelColor(level);
                 mHandler.postDelayed(new Runnable() {
                     public void run() {
                         avatar.setImageResource(R.drawable.level3);
@@ -167,8 +165,7 @@ public class MyLevelActivity extends AppCompatActivity {
                 avatar.setImageResource(R.drawable.level4);
                 myLevelText.setText(R.string.level4Title);
                 myLevelDescriptionText.setText(R.string.level4Description);
-                level4TV.setVisibility(View.VISIBLE);
-                level4TV.setBackgroundColor(getResources().getColor(R.color.level4Color));
+                setLevelColor(level);
                 mHandler.postDelayed(new Runnable() {
                     public void run() {
                         avatar.setImageResource(R.drawable.level4);
@@ -184,8 +181,7 @@ public class MyLevelActivity extends AppCompatActivity {
                 avatar.setImageResource(R.drawable.level5);
                 myLevelText.setText(R.string.level5Title);
                 myLevelDescriptionText.setText(R.string.level5Description);
-                level5TV.setVisibility(View.VISIBLE);
-                level5TV.setBackgroundColor(getResources().getColor(R.color.level5Color));
+                setLevelColor(level);
                 mHandler.postDelayed(new Runnable() {
                     public void run() {
                         avatar.setImageResource(R.drawable.level5);
@@ -211,6 +207,51 @@ public class MyLevelActivity extends AppCompatActivity {
             root.setScaleX(1);
             root.setScaleY(1);
             root.setAlpha(1);
+        }
+    }
+
+    private void setLevelColor(int level){
+        switch (level) {
+            case 1:
+                level1TV.setVisibility(View.VISIBLE);
+                level1TV.setBackgroundColor(getResources().getColor(R.color.level1Color));
+                level2TV.setBackgroundColor(getResources().getColor(R.color.white));
+                level3TV.setBackgroundColor(getResources().getColor(R.color.white));
+                level4TV.setBackgroundColor(getResources().getColor(R.color.white));
+                level5TV.setBackgroundColor(getResources().getColor(R.color.white));
+                break;
+            case 2:
+                level2TV.setVisibility(View.VISIBLE);
+                level1TV.setBackgroundColor(getResources().getColor(R.color.white));
+                level2TV.setBackgroundColor(getResources().getColor(R.color.level2Color));
+                level3TV.setBackgroundColor(getResources().getColor(R.color.white));
+                level4TV.setBackgroundColor(getResources().getColor(R.color.white));
+                level5TV.setBackgroundColor(getResources().getColor(R.color.white));
+                break;
+            case 3:
+                level3TV.setVisibility(View.VISIBLE);
+                level1TV.setBackgroundColor(getResources().getColor(R.color.white));
+                level2TV.setBackgroundColor(getResources().getColor(R.color.white));
+                level3TV.setBackgroundColor(getResources().getColor(R.color.level3Color));
+                level4TV.setBackgroundColor(getResources().getColor(R.color.white));
+                level5TV.setBackgroundColor(getResources().getColor(R.color.white));
+                break;
+            case 4:
+                level4TV.setVisibility(View.VISIBLE);
+                level1TV.setBackgroundColor(getResources().getColor(R.color.white));
+                level2TV.setBackgroundColor(getResources().getColor(R.color.white));
+                level3TV.setBackgroundColor(getResources().getColor(R.color.white));
+                level4TV.setBackgroundColor(getResources().getColor(R.color.level4Color));
+                level5TV.setBackgroundColor(getResources().getColor(R.color.white));
+                break;
+            case 5:
+                level5TV.setVisibility(View.VISIBLE);
+                level1TV.setBackgroundColor(getResources().getColor(R.color.white));
+                level2TV.setBackgroundColor(getResources().getColor(R.color.white));
+                level3TV.setBackgroundColor(getResources().getColor(R.color.white));
+                level4TV.setBackgroundColor(getResources().getColor(R.color.white));
+                level5TV.setBackgroundColor(getResources().getColor(R.color.level5Color));
+                break;
         }
     }
 }
