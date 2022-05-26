@@ -17,10 +17,9 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyCbp04AZZ_KEoDoDF1ZNrfHg-NketDJZ0g" /> <!--// 성구 키값-->
-
+            android:value="AIzaSyCbp04AZZ_KEoDoDF1ZNrfHg-NketDJZ0g" /> <!-- // 성구 키값 -->
         <activity
-            android:name=".LoginActivity"
+            android:name=".MyLevelActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,7 +34,7 @@
         <activity android:name=".SignupActivity" />
         <activity android:name=".HomeActivity" />
         <activity android:name=".MainActivity" />
-        <activity android:name=".ScanQRActivity"/>
+        <activity android:name=".ScanQRActivity" />
     </application>
 
 </manifest>
