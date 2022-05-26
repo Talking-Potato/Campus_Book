@@ -42,7 +42,15 @@
         <entry key="..\:/Users/woo98/AndroidStudioProjects/Campus_Book/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/woo98/AndroidStudioProjects/Campus_Book/app/src/main/res/layout/fragment_achievement.xml" value="0.2" />
         <entry key="..\:/Users/woo98/AndroidStudioProjects/Campus_Book/app/src/main/res/layout/fragment_mylevel.xml" value="0.24947916666666667" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.165" />
+        <entry key="app/src/main/res/drawable/progressbar_circular.xml" value="0.222" />
+        <entry key="app/src/main/res/drawable/progressbar_circularbg.xml" value="0.222" />
+        <entry key="app/src/main/res/layout/activity_achievement.xml" value="0.31927083333333334" />
+        <entry key="app/src/main/res/layout/activity_home.xml" value="0.16210739614994935" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.3333333333333333" />
+        <entry key="app/src/main/res/layout/activity_map.xml" value="0.22760416666666666" />
+        <entry key="app/src/main/res/layout/activity_my_level.xml" value="0.27291666666666664" />
+        <entry key="app/src/main/res/layout/fragment_achievement_temp.xml" value="0.3333333333333333" />
       </map>
     </option>
   </component>

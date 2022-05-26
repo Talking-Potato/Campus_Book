@@ -1,10 +1,10 @@
 package com.example.term_project;
 
-public class SignupData {
+public class SignUpData {
     String name;
     String schoolID;
 
-    public SignupData() {
+    public SignUpData() {
     }
 
     //getter, setter 설정
@@ -24,7 +24,7 @@ public class SignupData {
         this.schoolID = schoolID;
     }
 
-    public SignupData(String name, String schoolID) {
+    public SignUpData(String name, String schoolID) {
         this.name = name;
         this.schoolID = schoolID;
     }
