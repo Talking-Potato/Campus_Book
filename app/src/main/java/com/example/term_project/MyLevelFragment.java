@@ -18,6 +18,7 @@ import android.widget.ProgressBar;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import tyrantgit.explosionfield.ExplosionField;
 
 public class MyLevelFragment extends Fragment {
 
@@ -32,6 +33,10 @@ public class MyLevelFragment extends Fragment {
     ImageView avatar;
     TextView myLevelText, myLevelDescriptionText;
     TextView level1TV, level2TV, level3TV, level4TV, level5TV;
+
+    //폭발 효과 object
+    ExplosionField explosionField;
+    Handler mHandler = new Handler();
     //나의 현재 레벨
     private int myLevel = 1;
     //나의 현재 경험치
@@ -51,6 +56,7 @@ public class MyLevelFragment extends Fragment {
 //    private int level4Exp = 2500;
 //    private int level5Exp = 5000;
 
+    boolean explod = true;
 
     public MyLevelFragment() {
         // Required empty public constructor
@@ -70,18 +76,26 @@ public class MyLevelFragment extends Fragment {
                 myLevelText.setText(R.string.level1Title);
                 myLevelDescriptionText.setText(R.string.level1Description);
                 level1TV.setBackgroundColor(getResources().getColor(R.color.level1Color));
+
                 break;
             case 2 :
+                explosionField.explode(avatar);
                 expBar.setMax(level2Exp);
                 expBar.setProgress(myExp);
-                avatar.setImageResource(R.drawable.level2);
                 myLevelText.setText(R.string.level2Title);
                 myLevelDescriptionText.setText(R.string.level2Description);
                 level2TV.setVisibility(View.VISIBLE);
                 level2TV.setBackgroundColor(getResources().getColor(R.color.level2Color));
-
+                mHandler.postDelayed(new Runnable() {
+                    public void run() {
+                        avatar.setImageResource(R.drawable.level2);
+                        reset(avatar);
+                        explosionField.clear();
+                        };
+                }, 1000);
                 break;
             case 3 :
+                explosionField.explode(avatar);
                 expBar.setMax(level3Exp);
                 expBar.setProgress(myExp);
                 avatar.setImageResource(R.drawable.level3);
@@ -89,9 +103,16 @@ public class MyLevelFragment extends Fragment {
                 myLevelDescriptionText.setText(R.string.level3Description);
                 level3TV.setVisibility(View.VISIBLE);
                 level3TV.setBackgroundColor(getResources().getColor(R.color.level3Color));
-
+                mHandler.postDelayed(new Runnable() {
+                    public void run() {
+                        avatar.setImageResource(R.drawable.level3);
+                        reset(avatar);
+                        explosionField.clear();
+                    };
+                }, 1000);
                 break;
             case 4 :
+                explosionField.explode(avatar);
                 expBar.setMax(level4Exp);
                 expBar.setProgress(myExp);
                 avatar.setImageResource(R.drawable.level4);
@@ -99,8 +120,16 @@ public class MyLevelFragment extends Fragment {
                 myLevelDescriptionText.setText(R.string.level4Description);
                 level4TV.setVisibility(View.VISIBLE);
                 level4TV.setBackgroundColor(getResources().getColor(R.color.level4Color));
+                mHandler.postDelayed(new Runnable() {
+                    public void run() {
+                        avatar.setImageResource(R.drawable.level4);
+                        reset(avatar);
+                        explosionField.clear();
+                    };
+                }, 1000);
                 break;
             case 5 :
+                explosionField.explode(avatar);
                 expBar.setMax(level5Exp);
                 expBar.setProgress(myExp);
                 avatar.setImageResource(R.drawable.level5);
@@ -108,11 +137,18 @@ public class MyLevelFragment extends Fragment {
                 myLevelDescriptionText.setText(R.string.level5Description);
                 level5TV.setVisibility(View.VISIBLE);
                 level5TV.setBackgroundColor(getResources().getColor(R.color.level5Color));
-
+                mHandler.postDelayed(new Runnable() {
+                    public void run() {
+                        avatar.setImageResource(R.drawable.level5);
+                        reset(avatar);
+                        explosionField.clear();
+                    };
+                }, 1000);
                 break;
             default:
                 expBar.setMax(120);
                 expBar.setProgress(myExp);
+                explosionField.explode(avatar);
                 break;
         }
     }
@@ -135,6 +171,9 @@ public class MyLevelFragment extends Fragment {
         level3TV = (TextView) rootView.findViewById(R.id.level3TV) ;
         level4TV = (TextView) rootView.findViewById(R.id.level4TV) ;
         level5TV = (TextView) rootView.findViewById(R.id.level5TV) ;
+
+        explosionField = ExplosionField.attach2Window(((MainActivity) getActivity()));
+
         //나의 현재 총 경험치 불러오기
         myExp = 0;
         expBar.setProgress(myExp);
@@ -183,6 +222,18 @@ public class MyLevelFragment extends Fragment {
         return rootView;
     }
 
+    private void reset(View root) {
+        if (root instanceof ViewGroup) {
+            ViewGroup parent = (ViewGroup) root;
+            for (int i = 0; i < parent.getChildCount(); i++) {
+                reset(parent.getChildAt(i));
+            }
+        } else {
+            root.setScaleX(1);
+            root.setScaleY(1);
+            root.setAlpha(1);
+        }
+    }
 
 
 }
