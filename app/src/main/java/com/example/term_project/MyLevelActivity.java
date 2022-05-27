@@ -1,16 +1,27 @@
 package com.example.term_project;
 
+
+import android.animation.ValueAnimator;
+import android.content.Context;
+import android.media.Image;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+
 import android.os.Handler;
+import android.os.Message;
+import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AppCompatActivity;
+
 
 import tyrantgit.explosionfield.ExplosionField;
 
@@ -19,7 +30,9 @@ public class MyLevelActivity extends AppCompatActivity {
     ProgressBar expBar;
     Button addBtn, lowerBtn;
     ImageView avatar;
-    TextView myLevelText, myLevelDescriptionText;
+
+    TextView myLevelText, myLevelDescriptionText, usableExpText;
+
     TextView level1TV, level2TV, level3TV, level4TV, level5TV;
 
     //폭발 효과 object
@@ -29,6 +42,10 @@ public class MyLevelActivity extends AppCompatActivity {
     private int myLevel = 1;
     //나의 현재 경험치
     private int myExp = 0;
+
+    //더할 수 있는 경험치 양
+    private int usableExp = 1000;
+
     //경험치바의 현재 경험치량을 나타낼 값
     private int expVal = 0;
     //미리 설정된 레벨에 따른 경험치 값들
@@ -50,10 +67,11 @@ public class MyLevelActivity extends AppCompatActivity {
         setContentView(R.layout.activity_my_level);
         expBar = (ProgressBar) findViewById(R.id.expBar);
         addBtn = (Button) findViewById(R.id.addExp);
-        lowerBtn = (Button) findViewById(R.id.lowerExp);
         avatar = (ImageView) findViewById(R.id.levelAvatar);
         myLevelText = (TextView) findViewById(R.id.myLevel) ;
         myLevelDescriptionText = (TextView) findViewById(R.id.myLevel_description) ;
+        usableExpText = (TextView) findViewById(R.id.usableExpText);
+
 
         level1TV = (TextView) findViewById(R.id.level1TV) ;
         level2TV = (TextView) findViewById(R.id.level2TV) ;
@@ -70,41 +88,40 @@ public class MyLevelActivity extends AppCompatActivity {
         // 내 레벨에 맞는 경험치 최대치 설정
         setLevel(myLevel);
 
+
+        // 내가 추가할 수 있는 경험치양 불러오기
+        usableExp = 2000;
+        usableExpText.setText("사용 가능한 EXP : " + usableExp);
+
+
         addBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 expVal = expBar.getProgress();
 //                Log.d("EXP","EXP progresas " + expVal);
-                int earnExp = 20; // 버튼 클릭당 증가하는 경험치
-                if(expVal < expBar.getMax()){
-                    for(int i = 0; i < earnExp; i++) {
-                        Handler mHandler = new Handler();
-                        mHandler.postDelayed(new Runnable() {
-                            public void run() {
-                                expVal = expVal + 1;
-                                expBar.setProgress(expVal);
-                                if (expVal >= expBar.getMax()) { // 만약 경펌치를 다 채우면
-                                    expVal = 0; //현 경험치 = 0 초기화
-                                    myLevel += 1; //레벨업 한칸
-                                    setLevel(myLevel);//레벨업 처리
-                                    //Toast로 알려주기
-                                    String levelupText = "축하합니다! 당신은 level" + myLevel + "입니다";
-                                    Toast.makeText(getApplicationContext(), levelupText, Toast.LENGTH_SHORT).show();
-                                }}
-                        }, i * 5);
-                    }}
-            }
-        });
 
-        lowerBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                expVal = expBar.getProgress();
-//                Log.d("EXP","EXP progresas " + expVal);
-                if(expVal > 0){
-                    expVal = expVal - 10;
+                int clickExp = 20; // 버튼 클릭당 증가하는 경험치
+                if(usableExp > 0) {//사용가능한 EXP가 남아있다면
+                        for(int i = 0; i < clickExp; i++) {
+                            Handler mHandler = new Handler();
+                            mHandler.postDelayed(new Runnable() {
+                                public void run() {
+                                    expVal = expVal + 1;
+                                    expBar.setProgress(expVal);
+                                    if (expVal >= expBar.getMax()) { // 만약 경펌치를 다 채우면
+                                        expVal = 0; //현 경험치 = 0 초기화
+                                        myLevel += 1; //레벨업 한칸
+                                        setLevel(myLevel);//레벨업 처리
+                                        //Toast로 알려주기
+                                        String levelupText = "축하합니다! 당신은 level" + myLevel + "입니다";
+                                        Toast.makeText(getApplicationContext(), levelupText, Toast.LENGTH_SHORT).show();
+                                    }}
+                            }, i * 5);
+                        }
+                        usableExp = usableExp - clickExp;
+                        if (usableExp < 0) usableExp = 0;
+                    usableExpText.setText("사용 가능한 EXP : " + usableExp);
                 }
-                expBar.setProgress(expVal);
             }
         });
     }

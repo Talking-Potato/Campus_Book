@@ -1,144 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:paddingTop="20dp"
-        android:background="@color/white">
-    <!--  업적  -->
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingTop="20dp"
+    android:background="@color/white">
+    <!-- 업적 -->
     <TextView
-            android:id="@+id/myLevel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="-12dp"
-            android:gravity="center_horizontal|center_vertical"
-            android:text="@string/my_level_title"
-            android:textAppearance="@style/page_title"
-            tools:ignore="MissingConstraints" />
+        android:id="@+id/myLevel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-12dp"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="@string/my_level_title"
+        android:textAppearance="@style/page_title"
+        tools:ignore="MissingConstraints" />
 
     <RelativeLayout
-            android:id="@+id/levelWrapper"
-            android:layout_width="match_parent"
-            android:layout_height="288dp"
-            android:layout_below="@id/myLevel"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="-18dp"
-            android:layout_marginEnd="0dp"
-            android:orientation="horizontal">
+        android:id="@+id/levelWrapper"
+        android:layout_width="match_parent"
+        android:layout_height="318dp"
 
+        android:layout_below="@id/myLevel"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-18dp"
+        android:layout_marginEnd="0dp"
+        android:orientation="horizontal">
+
+        <!--        https://show-me-the-money.tistory.com/entry/Circular-Progress-bar-%EB%A7%8C%EB%93%A4%EA%B8%B0-->
         <ImageView
-                android:id="@+id/levelAvatar"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:layout_marginLeft="25dp"
-                android:layout_marginTop="30dp"
-                android:src="@drawable/level22" />
+            android:id="@+id/levelAvatar"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/level22" />
 
         <ProgressBar
-                android:id="@+id/expBar"
-                android:layout_width="250dp"
-                android:layout_height="300dp"
-                android:background="@drawable/progressbar_circularbg"
-                android:indeterminateOnly="false"
-                android:max="120"
-                android:progress="20"
-                android:progressDrawable="@drawable/progressbar_circular" />
-        <!--         https://show-me-the-money.tistory.com/entry/Circular-Progress-bar-%EB%A7%8C%EB%93%A4%EA%B8%B0 -->
+            android:id="@+id/expBar"
+            android:layout_width="250dp"
+            android:layout_height="300dp"
+            android:background="@drawable/progressbar_circularbg"
+            android:indeterminateOnly="false"
+            android:max="120"
+            android:progress="20"
+            android:progressDrawable="@drawable/progressbar_circular" />
+
         <TextView
-                android:id="@+id/myLevel_description"
-                android:layout_width="155dp"
-                android:layout_height="232dp"
-                android:layout_gravity="right"
-                android:layout_marginLeft="6dp"
-                android:layout_toRightOf="@+id/levelAvatar"
-                android:gravity="center"
-                android:text="당신은\n22학번\n입니다!"
-                android:textColor="@color/black"
-                android:textSize="30dp" />
+            android:id="@+id/myLevel_description"
+            android:layout_width="166dp"
+            android:layout_height="197dp"
+            android:layout_gravity="right"
+            android:layout_marginLeft="6dp"
+            android:layout_marginTop="25dp"
+            android:layout_toRightOf="@+id/levelAvatar"
+            android:gravity="center"
+            android:text="당신은\n22학번\n입니다!"
+            android:textColor="@color/black"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/usableExpText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/addExp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="7dp"
+            android:layout_marginRight="21dp"
+            android:text="사용 가능한 EXP : 0"
+            android:textSize="17dp" />
 
         <Button
-                android:id="@+id/lowerExp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/myLevel_description"
-                android:layout_toLeftOf="@id/addExp"
-                android:text="경험치 뺴기" />
-
-        <Button
-                android:id="@+id/addExp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/myLevel_description"
-                android:layout_alignParentRight="true"
-                android:text="경험치 더하기" />
+            android:id="@+id/addExp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/myLevel_description"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginRight="39dp"
+            android:text="경험치 더하기" />
     </RelativeLayout>
 
+
     <ScrollView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/levelWrapper"
-            android:layout_alignParentLeft="true">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/levelWrapper"
+        android:layout_alignParentLeft="true">
 
         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/level1TV"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:layout_height="80dp"
+                android:background="@drawable/login_box"
+                android:paddingLeft="80dp"
+                android:gravity="center_vertical"
+                android:text="@string/level1Name"
+                android:textSize="20sp" />
 
             <TextView
-                    android:id="@+id/level1TV"
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:background="@drawable/login_box"
-                    android:paddingLeft="80dp"
-                    android:gravity="center_vertical"
-                    android:text="@string/level1Name"
-                    android:textSize="20sp" />
+                android:id="@+id/level2TV"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/login_box"
+                android:paddingLeft="80dp"
+                android:gravity="center_vertical"
+                android:text="@string/level2Name"
+                android:textSize="20sp"
+                android:visibility="invisible"/>
 
             <TextView
-                    android:id="@+id/level2TV"
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:background="@drawable/login_box"
-                    android:paddingLeft="80dp"
-                    android:gravity="center_vertical"
-                    android:text="@string/level2Name"
-                    android:textSize="20sp"
-                    android:visibility="invisible" />
+                android:id="@+id/level3TV"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/login_box"
+                android:paddingLeft="80dp"
+                android:gravity="center_vertical"
+                android:text="@string/level3Name"
+                android:textSize="20sp"
+                android:visibility="invisible"/>
 
             <TextView
-                    android:id="@+id/level3TV"
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:background="@drawable/login_box"
-                    android:paddingLeft="80dp"
-                    android:gravity="center_vertical"
-                    android:text="@string/level3Name"
-                    android:textSize="20sp"
-                    android:visibility="invisible" />
+                android:id="@+id/level4TV"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/login_box"
+                android:paddingLeft="80dp"
+                android:gravity="center_vertical"
+                android:text="@string/level4Name"
+                android:textSize="20sp"
+                android:visibility="invisible"/>
 
             <TextView
-                    android:id="@+id/level4TV"
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:background="@drawable/login_box"
-                    android:paddingLeft="80dp"
-                    android:gravity="center_vertical"
-                    android:text="@string/level4Name"
-                    android:textSize="20sp"
-                    android:visibility="invisible" />
+                android:id="@+id/level5TV"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/login_box"
+                android:paddingLeft="80dp"
+                android:gravity="center_vertical"
+                android:text="@string/level5Name"
+                android:textSize="20sp"
+                android:visibility="invisible"/>
 
-            <TextView
-                    android:id="@+id/level5TV"
-                    android:layout_width="match_parent"
-                    android:layout_height="80dp"
-                    android:background="@drawable/login_box"
-                    android:paddingLeft="80dp"
-                    android:gravity="center_vertical"
-                    android:text="@string/level5Name"
-                    android:textSize="20sp"
-                    android:visibility="invisible" />
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>
