@@ -9,9 +9,34 @@
 
     <fragment
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
         android:id="@+id/map"
         tools:context=".MapsActivity"
         android:name="com.google.android.gms.maps.SupportMapFragment" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <Button
+            android:text="식당"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/button"
+            android:layout_weight="1"/>
+        <Button
+            android:text="카페"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/button2"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="학교"
+            android:layout_weight="1"/>
+    </LinearLayout>
 </LinearLayout>
