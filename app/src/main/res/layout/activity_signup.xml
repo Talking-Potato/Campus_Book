@@ -34,6 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/login_box"
+        android:text="potato@gachon.ac.kr"
         android:hint="ex) potato@gachon.ac.kr"
         android:paddingHorizontal="10dp" />
 
@@ -48,6 +49,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/login_box"
+        android:text="123456"
         android:hint="비밀번호를 입력해주세요"
         android:inputType="textPassword"
         android:paddingHorizontal="10dp" />
@@ -64,6 +66,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/login_box"
+        android:text="123456"
         android:hint="비밀번호를 한번더 입력해주세요"
         android:inputType="textPassword"
         android:paddingHorizontal="10dp" />
@@ -79,6 +82,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/login_box"
+        android:text="potato"
         android:hint="이름을 입력해주세요"
         android:paddingHorizontal="10dp" />
 
@@ -93,6 +97,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/login_box"
+        android:text="2018XXXXX"
         android:hint="ex) 2018"
         android:paddingHorizontal="10dp" />
 

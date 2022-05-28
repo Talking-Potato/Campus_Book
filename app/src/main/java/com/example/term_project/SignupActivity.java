@@ -1,6 +1,7 @@
 package com.example.term_project;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -80,10 +81,11 @@ public class SignupActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // 회원가입 성공시
                             SignUpData signupData = new SignUpData(name, schoolID);
-                            databaseReference.push().setValue(signupData);
+                            String[] emailTokenList = ID.split("@");
+                            String[] emailTokenList2 = emailTokenList[1].split("\\.");
+                            String emailToken = emailTokenList[0].concat(emailTokenList2[0]);
+                            databaseReference.child("user").child(emailToken).setValue(signupData);
                             Toast.makeText(SignupActivity.this, "회원가입 성공", Toast.LENGTH_SHORT).show();
-
-
                         } else {
                             // 계정이 중복된 경우
                             Toast.makeText(SignupActivity.this, "이미 존재하는 계정입니다.", Toast.LENGTH_SHORT).show();
