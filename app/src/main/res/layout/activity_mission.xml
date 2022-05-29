@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MissionActivity">
+
+    <Button
+        android:id="@+id/Visitbutton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_border"
+        android:textColor="#ffffff"
+        android:text="매장 / 건물 방문" />
+
+    <Button
+        android:id="@+id/RideLadybug"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_border"
+        android:textColor="#ffffff"
+        android:text="무당이 탑승" />
+
+    <Button
+        android:id="@+id/VisitMedical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_border"
+        android:textColor="#ffffff"
+        android:text="메디컬 캠퍼스 최초 방문" />
+
+    <Button
+        android:id="@+id/VisitGlobal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_border"
+        android:textColor="#ffffff"
+        android:text="글로벌 캠퍼스 최초 방문" />
+
+    <Button
+        android:id="@+id/Writing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_border"
+        android:textColor="#ffffff"
+        android:text="게시글 / 리뷰 작성" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/time"
+        android:textAlignment="center"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginTop="30dp"
+        android:textSize="35dp"
+        android:background="@drawable/state_background_unactive"
+        android:textColor="#ffffff" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/timer_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/state_background_unactive"
+            android:text="교내 Timer 시작"
+            android:textAllCaps="false"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/btnStop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="50dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/state_background_active"
+            android:text="중지"
+            android:textColor="#ffffff" />
+        </RelativeLayout>
+
+    <Button
+        android:id="@+id/Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/button_border"
+        android:textColor="#ffffff"
+        android:layout_gravity="right"
+        android:text="돌아가기" />
+</LinearLayout>
