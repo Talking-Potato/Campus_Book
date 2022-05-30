@@ -1,8 +1,10 @@
 package com.example.term_project;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -29,9 +31,18 @@ public class AchievementActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView parent, View v, int position, long id){
+                Achievement item = myAdapter.getItem(position);
                 Toast.makeText(getApplicationContext(),
-                        myAdapter.getItem(position).getTitle(),
+                        item.getTitle(),
                         Toast.LENGTH_LONG).show();
+                LinearLayout bg = (LinearLayout) v.findViewById(R.id.achivBox);
+                //set clicked item background to white.
+                item.setCanObtainExp(false);
+                if(!item.getCanObtainExp()) {
+                        bg.setBackgroundColor(Color.WHITE);
+                }
+
+
             }
         });
     }
