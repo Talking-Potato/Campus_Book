@@ -13,7 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 
 public class AchievementActivity extends AppCompatActivity {
-
+    Integer gainExp = 0;
     ArrayList<Achievement> achievList;
 
     @Override
@@ -22,6 +22,7 @@ public class AchievementActivity extends AppCompatActivity {
         setContentView(R.layout.activity_achievement);
 
         this.IntializeData();
+
 
         ListView listView = (ListView)findViewById(R.id.achivList);
         final AchievementAdapter myAdapter = new AchievementAdapter(this,achievList);
@@ -41,7 +42,8 @@ public class AchievementActivity extends AppCompatActivity {
                 if(!item.getCanObtainExp()) {
                         bg.setBackgroundColor(Color.WHITE);
                 }
-
+                gainExp += item.getExp();
+                Toast.makeText(getApplicationContext(), gainExp.toString(), Toast.LENGTH_SHORT).show();
 
             }
         });
