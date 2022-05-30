@@ -43,6 +43,9 @@
         <entry key="..\:/Users/woo98/AndroidStudioProjects/Campus_Book/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/woo98/AndroidStudioProjects/Campus_Book/app/src/main/res/layout/fragment_achievement.xml" value="0.2" />
         <entry key="..\:/Users/woo98/AndroidStudioProjects/Campus_Book/app/src/main/res/layout/fragment_mylevel.xml" value="0.24947916666666667" />
+        <entry key="app/src/main/res/layout/activity_achievement.xml" value="0.18659420289855072" />
+        <entry key="app/src/main/res/layout/activity_signup.xml" value="0.16210739614994935" />
+        <entry key="app/src/main/res/layout/listview_achiev.xml" value="0.25" />
       </map>
     </option>
   </component>
