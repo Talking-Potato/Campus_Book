@@ -5,6 +5,7 @@
     android:height="50dp"
     android:viewportWidth="300"
     android:viewportHeight="50"
+    android:tint="#243A73"
     >
 
     <group>

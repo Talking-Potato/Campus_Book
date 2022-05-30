@@ -36,7 +36,11 @@
             tools:replace="screenOrientation" />
         <activity android:name=".SignupActivity" />
         <activity android:name=".HomeActivity" />
+
         <activity android:name=".MissionActivity" />
+
+        <activity android:name=".LadyBugActivity" />
+
         <activity android:name=".MapActivity" />
         <activity android:name=".MyLevelActivity" />
         <activity android:name=".AchievementActivity" />

@@ -21,6 +21,7 @@ public class LoginActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private EditText edit_id;
     private EditText edit_pw;
+    public String emailToken;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +62,13 @@ public class LoginActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) { //로그인 성공시
                             //MainActivity로 이동
+                            String[] emailTokenList = email.split("@");
+                            String[] emailTokenList2 = emailTokenList[1].split("\\.");
+                            String emailToken = emailTokenList[0].concat(emailTokenList2[0]);
                             Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                            Bundle token = new Bundle();
+                            token.putString("token", emailToken);
+                            intent.putExtras(token);
                             startActivity(intent);
                         } else {
                             //현재 화면에 '로그인 실패' 토스트 문구 노출

@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/JIMINFILES/Univ Docs/3/Mobile Programming/Campus_Book/app/src/main/res/drawable/bottom_navigation_color.xml" value="0.1535" />
+        <entry key="..\:/JIMINFILES/Univ Docs/3/Mobile Programming/Campus_Book/app/src/main/res/drawable/button_border.xml" value="0.1275" />
+        <entry key="..\:/JIMINFILES/Univ Docs/3/Mobile Programming/Campus_Book/app/src/main/res/drawable/login_box.xml" value="0.1375" />
         <entry key="..\:/JIMINFILES/Univ Docs/3/Mobile Programming/Campus_Book/app/src/main/res/layout/achievements.xml" value="0.115625" />
         <entry key="..\:/JIMINFILES/Univ Docs/3/Mobile Programming/Campus_Book/app/src/main/res/layout/activitiy_main_screen.xml" value="0.152" />
         <entry key="..\:/JIMINFILES/Univ Docs/3/Mobile Programming/Campus_Book/app/src/main/res/layout/activity_home.xml" value="0.2" />
@@ -30,22 +32,11 @@
         <entry key="..\:/Users/ChungHyunwoo/OneDrive - gachon.ac.kr/AndroidStudioProjects/3-1_Mobile_Programming/Term_Project/app/src/main/res/layout/activity_signup.xml" value="0.4076923076923077" />
         <entry key="..\:/Users/ChungHyunwoo/OneDrive - gachon.ac.kr/AndroidStudioProjects/3-1_Mobile_Programming/Term_Project/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.28504273504273503" />
         <entry key="..\:/Users/ChungHyunwoo/OneDrive - gachon.ac.kr/AndroidStudioProjects/3-1_Mobile_Programming/Term_Project/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.28504273504273503" />
-        <entry key="..\:/Users/skwms/AndroidStudioProjects/Campus_Book/app/src/main/res/drawable/button_border.xml" value="0.1535" />
-        <entry key="..\:/Users/skwms/AndroidStudioProjects/Campus_Book/app/src/main/res/drawable/login_box.xml" value="0.1535" />
-        <entry key="..\:/Users/skwms/AndroidStudioProjects/Campus_Book/app/src/main/res/drawable/login_login.xml" value="0.1535" />
-        <entry key="..\:/Users/skwms/AndroidStudioProjects/Campus_Book/app/src/main/res/drawable/state_background_active.xml" value="0.1535" />
-        <entry key="..\:/Users/skwms/AndroidStudioProjects/Campus_Book/app/src/main/res/drawable/state_background_unactive.xml" value="0.1535" />
         <entry key="..\:/Users/skwms/AndroidStudioProjects/Campus_Book/app/src/main/res/layout/activitiy_main_screen.xml" value="0.1875" />
-        <entry key="..\:/Users/skwms/AndroidStudioProjects/Campus_Book/app/src/main/res/layout/activity_achievement.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/skwms/AndroidStudioProjects/Campus_Book/app/src/main/res/layout/activity_fragment_scanqr.xml" value="0.18489583333333334" />
         <entry key="..\:/Users/skwms/AndroidStudioProjects/Campus_Book/app/src/main/res/layout/activity_home.xml" value="0.1875" />
         <entry key="..\:/Users/skwms/AndroidStudioProjects/Campus_Book/app/src/main/res/layout/activity_login.xml" value="0.1875" />
         <entry key="..\:/Users/skwms/AndroidStudioProjects/Campus_Book/app/src/main/res/layout/activity_main.xml" value="0.3619791666666667" />
-<<<<<<< HEAD
-=======
-        <entry key="..\:/Users/skwms/AndroidStudioProjects/Campus_Book/app/src/main/res/layout/activity_map.xml" value="0.25" />
-        <entry key="..\:/Users/skwms/AndroidStudioProjects/Campus_Book/app/src/main/res/layout/activity_mission.xml" value="0.36614583333333334" />
->>>>>>> 795e8980c6b07b4d71cfec8344895ac377e94195
         <entry key="..\:/Users/skwms/AndroidStudioProjects/Campus_Book/app/src/main/res/layout/activity_qr.xml" value="0.1703125" />
         <entry key="..\:/Users/skwms/AndroidStudioProjects/Campus_Book/app/src/main/res/layout/activity_signup.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/skwms/AndroidStudioProjects/Campus_Book/app/src/main/res/layout/fragment_map.xml" value="0.3619791666666667" />
