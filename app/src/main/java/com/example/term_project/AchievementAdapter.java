@@ -7,6 +7,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 public class AchievementAdapter extends BaseAdapter {
@@ -40,9 +42,16 @@ public class AchievementAdapter extends BaseAdapter {
         View view = mLayoutInflater.inflate(R.layout.listview_achiev, null);
 
         TextView title = (TextView) view.findViewById(R.id.achivTitle);
+        TextView date = (TextView) view.findViewById(R.id.achivDate);
+        TextView exp = (TextView) view.findViewById(R.id.achivExp);
+
 
         title.setText(list.get(position).getTitle());
+        date.setText(list.get(position).getDate());
+        exp.setText("획득 EXP : " + list.get(position).getExp().toString());
 
         return view;
     }
+
+
 }
