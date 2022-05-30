@@ -30,14 +30,13 @@
         android:layout_marginEnd="0dp"
         android:orientation="horizontal">
 
-        <!--        https://show-me-the-money.tistory.com/entry/Circular-Progress-bar-%EB%A7%8C%EB%93%A4%EA%B8%B0-->
         <ImageView
             android:id="@+id/levelAvatar"
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:layout_marginLeft="25dp"
             android:layout_marginTop="30dp"
-            android:src="@drawable/level22" />
+            android:src="@drawable/level2" />
 
         <ProgressBar
             android:id="@+id/expBar"
