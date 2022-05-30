@@ -40,10 +40,8 @@ public class AchievementAdapter extends BaseAdapter {
         View view = mLayoutInflater.inflate(R.layout.listview_achiev, null);
 
         TextView title = (TextView) view.findViewById(R.id.achivTitle);
-        TextView date = (TextView) view.findViewById(R.id.achivDate);
 
         title.setText(list.get(position).getTitle());
-        date.setText(list.get(position).getDate());
 
         return view;
     }

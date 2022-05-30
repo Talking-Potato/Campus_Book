@@ -3,14 +3,12 @@ package com.example.term_project;
 public class Achievement {
 
     private String title;
-    private String date;
 
     public Achievement() {
     }
 
-    public Achievement(String title, String date) {
+    public Achievement(String title) {
         this.title = title;
-        this.date = date;
     }
 
     public String getTitle() {
@@ -21,11 +19,4 @@ public class Achievement {
         this.title = title;
     }
 
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
 }

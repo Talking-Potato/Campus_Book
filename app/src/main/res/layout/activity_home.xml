@@ -25,6 +25,7 @@
             android:layout_height="60dp"
             android:layout_gravity="bottom"
             android:layout_weight="1"
+            android:background="@drawable/button_border"
             android:text="지도" />
 
         <Button
@@ -33,6 +34,7 @@
             android:layout_height="60dp"
             android:layout_gravity="bottom"
             android:layout_weight="1"
+            android:background="@drawable/button_border"
             android:text="QR" />
 
         <Button
@@ -41,6 +43,7 @@
             android:layout_height="60dp"
             android:layout_gravity="bottom"
             android:layout_weight="1"
+            android:background="@drawable/button_border"
             android:text="업적" />
 
         <Button
@@ -49,6 +52,7 @@
             android:layout_height="60dp"
             android:layout_gravity="bottom"
             android:layout_weight="1"
+            android:background="@drawable/button_border"
             android:text="레벨" />
     </LinearLayout>
 

@@ -36,11 +36,10 @@ public class AchievementActivity extends AppCompatActivity {
         });
     }
 
-    public void IntializeData()
-    {
+    public void IntializeData() {
         achievList = new ArrayList<Achievement>();
 
-        achievList.add(new Achievement("매장/건물 최초 방문 (일 최대 각 1회 / gps 거리 10m이내 20분 이상)", "22.05.26"));
-        achievList.add(new Achievement("매장/건물 10회 방문+20", "22.05.27"));
+        achievList.add(new Achievement("매장/건물 최초 방문 (일 최대 각 1회 / gps 거리 10m이내 20분 이상)"));
+        achievList.add(new Achievement("매장/건물 10회 방문+20"));
     }
 }
