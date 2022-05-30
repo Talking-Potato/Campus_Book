@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
+import java.util.MissingFormatArgumentException;
+
 public class ScanQRActivity extends AppCompatActivity {
     private IntentIntegrator qrScan;
     private String uri;
@@ -35,7 +37,7 @@ public class ScanQRActivity extends AppCompatActivity {
             else{   //content 가 있을때
                 Toast.makeText(this, "Scanned: " + result.getContents(), Toast.LENGTH_LONG).show();
                 uri = result.getContents();
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(uri));
+                Intent intent = new Intent(ScanQRActivity.this, MissionActivity.class);
                 startActivity(intent);
             }
         }
