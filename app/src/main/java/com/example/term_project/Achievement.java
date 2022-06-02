@@ -7,13 +7,15 @@ public class Achievement {
     private Integer exp;
     private Boolean canObtainExp = true;
 
+
     public Achievement() {
     }
 
-    public Achievement(String title, String date) {
+    public Achievement(String title) {
         this.title = title;
         this.date = date;
         this.exp = 50;
+
     }
 
     public Achievement(String title, String date, int exp) {
@@ -51,4 +53,5 @@ public class Achievement {
     public void setCanObtainExp(Boolean b) {
         this.canObtainExp = b;
     }
+
 }
