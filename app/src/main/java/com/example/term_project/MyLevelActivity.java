@@ -15,7 +15,6 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -27,39 +26,38 @@ import tyrantgit.explosionfield.ExplosionField;
 public class MyLevelActivity extends AppCompatActivity {
 
     ProgressBar expBar;
-    Button addBtn, lowerBtn;
+    Button addBtn;
     ImageView avatar;
 
     TextView myLevelText, myLevelDescriptionText, usableExpText;
-
     TextView level1TV, level2TV, level3TV, level4TV, level5TV;
-
-    private FirebaseDatabase database = FirebaseDatabase.getInstance();
-    private DatabaseReference databaseReference = database.getReference("user");
 
     //폭발 효과 object
     ExplosionField explosionField;
     Handler mHandler = new Handler();
-
+    //나의 현재 레벨
+    private int myLevel;
+    //나의 현재 경험치
+    private int myExp;
     //더할 수 있는 경험치 양
-    private int usableExp = 1000;
+    private int usableExp;
 
     //경험치바의 현재 경험치량을 나타낼 값
     private int expVal;
     //미리 설정된 레벨에 따른 경험치 값들
-    private int level1Exp = 250;
-    private int level2Exp = 350;
-    private int level3Exp = 450;
-    private int level4Exp = 550;
-    private int level5Exp = 650;
+    private int level1Exp = 240;
+    private int level2Exp = 360;
+    private int level3Exp = 480;
+    private int level4Exp = 600;
+    private int level5Exp = 720;
+
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    DatabaseReference databaseReference = database.getReference("user");
 
     public String emailToken;
-    private String exp_value;
-    private int Allexp;
-    private String exp_cur;
+    private String myExp_value;
+    private String current_exp;
     private int currentExp;
-    private int MyExp;
-    private int myLevel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,114 +78,110 @@ public class MyLevelActivity extends AppCompatActivity {
 
         explosionField = ExplosionField.attach2Window(this);
 
-        //나의 현재 총 경험치 불러오기
         Intent intent = getIntent();
         Bundle bundle = intent.getExtras();
         emailToken = bundle.getString("token");
+
+        //나의 현재 총 경험치 불러오기
         databaseReference.child(emailToken).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                exp_value = snapshot.child("Exp").getValue(String.class);
-                Allexp = Integer.parseInt(exp_value);
-                MyExp = Allexp;
-                if(0 <= MyExp && MyExp <= 250){
+                myExp_value = snapshot.child("Exp").getValue(String.class);
+                myExp = Integer.parseInt(myExp_value);
+                expBar.setProgress(myExp);
+                expVal = myExp;
+
+                if(0 <= myExp && myExp <= 240){
                     myLevel = 1;
-                    setLevel(myLevel);
-                    expBar.setProgress(MyExp);
                 }
-                if(250 < MyExp && MyExp <= 350){
+                else if(240 < myExp && myExp <= 360){
                     myLevel = 2;
-                    setLevel(myLevel);
-                    expBar.setProgress(MyExp);
                 }
-                if(350 < MyExp && MyExp <= 450){
+                else if(360 < myExp && myExp <= 480){
                     myLevel = 3;
-                    setLevel(myLevel);
-                    expBar.setProgress(MyExp);
                 }
-                if(450 < MyExp && MyExp <= 550){
+                else if(480 < myExp && myExp <= 600){
                     myLevel = 4;
-                    setLevel(myLevel);
-                    expBar.setProgress(MyExp);
                 }
-                if(550 < MyExp){
+                else if(600 < myExp){
                     myLevel = 5;
-                    setLevel(myLevel);
-                    expBar.setProgress(MyExp);
                 }
+
+                // 내 레벨에 맞는 경험치 최대치 설정
+                setLevel(myLevel);
+
+                // 내가 추가할 수 있는 경험치양 불러오기
+                databaseReference.child(emailToken).addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot snapshot) {
+                        current_exp = snapshot.child("CurrentExp").getValue(String.class);
+                        currentExp = Integer.parseInt(current_exp);
+                        usableExp = currentExp;
+                        usableExpText.setText("사용 가능한 EXP : " + usableExp);
+
+                        addBtn.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View view) {
+                                expVal =  expBar.getProgress();
+
+                                int clickExp = 20; // 버튼 클릭당 증가하는 경험치
+                                if(usableExp > 0) { //사용가능한 EXP가 남아있다면
+                                    for(int i = 0; i < clickExp; i++) {
+                                        Handler mHandler = new Handler();
+                                        mHandler.postDelayed(new Runnable() {
+                                            public void run() {
+                                                expVal = expVal + 1;
+                                                expBar.setProgress(expVal);
+                                                if (expVal >= expBar.getMax()) { //만약 경험치를 다 채우면
+                                                    expVal = 0; //현 경험치 = 0 초기화
+                                                    myLevel = myLevel + 1; //레벨업 한칸
+                                                    setLevel(myLevel);//레벨업 처리
+                                                    //Toast로 알려주기
+                                                    String levelupText = "축하합니다! 당신은 level" + myLevel + "입니다";
+                                                    Toast.makeText(getApplicationContext(), levelupText, Toast.LENGTH_SHORT).show();
+                                                    expBar.setProgress(0);
+                                                }}
+                                        }, i * 5);
+                                    }
+                                    usableExp = usableExp - clickExp;
+                                    myExp = myExp + clickExp;
+                                    if (usableExp < 0) usableExp = 0;
+                                    usableExpText.setText("사용 가능한 EXP : " + usableExp);
+
+                                    String value = Integer.toString(usableExp);
+                                    String exp_value = Integer.toString(myExp);
+                                    databaseReference.child(emailToken).child("CurrentExp").setValue(value);
+                                    databaseReference.child(emailToken).child("Exp").setValue(exp_value);
+                                    expBar.setProgress(myExp);
+
+                                }
+                            }
+                        });
+                    }
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                    }
+                });
             }
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
-            }
-        });
-
-        // 내가 추가할 수 있는 경험치양 불러오기
-        databaseReference.child(emailToken).addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                exp_cur = snapshot.child("CurrentExp").getValue(String.class);
-                currentExp = Integer.parseInt(exp_cur);
-                usableExp = currentExp;
-                usableExpText.setText("사용 가능한 EXP : " + usableExp);
-            }
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-            }
-        });
-
-        addBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                expVal = expBar.getProgress();
-//                Log.d("EXP","EXP progresas " + expVal);
-
-                int clickExp = 20; // 버튼 클릭당 증가하는 경험치
-                if(usableExp > 0) {//사용가능한 EXP가 남아있다면
-                        for(int i = 0; i < clickExp; i++) {
-                            Handler mHandler = new Handler();
-                            mHandler.postDelayed(new Runnable() {
-                                public void run() {
-                                    expVal = expVal + 1;
-                                    expBar.setProgress(expVal);
-                                    if (expVal >= expBar.getMax()) { // 만약 경험치를 다 채우면
-                                        expVal = 0; //현 경험치 = 0 초기화
-                                        myLevel += 1; //레벨업 한칸
-                                        setLevel(myLevel);//레벨업 처리
-                                        //Toast로 알려주기
-                                        String levelupText = "축하합니다! 당신은 level" + myLevel + "입니다";
-                                        Toast.makeText(getApplicationContext(), levelupText, Toast.LENGTH_SHORT).show();
-                                    }}
-                            }, i * 5);
-                        }
-                        usableExp = usableExp - clickExp;
-                        MyExp = MyExp + clickExp;
-                        if (usableExp < 0) usableExp = 0;
-                    usableExpText.setText("사용 가능한 EXP : " + usableExp);
-                    String value = Integer.toString(usableExp);
-                    String Myvalue = Integer.toString(MyExp);
-                    databaseReference.child(emailToken).child("CurrentExp").setValue(value);
-                    databaseReference.child(emailToken).child("Exp").setValue(Myvalue);
-                }
             }
         });
     }
 
-    private void setLevel(int level){
+    public void setLevel(int level){
         //현재 레벨 상태에 따라 최대 exp 세팅
         switch (level) {
             case 1 :
                 expBar.setMax(level1Exp);
-                expBar.setProgress(MyExp);
                 avatar.setImageResource(R.drawable.level1);
                 myLevelText.setText(R.string.level1Title);
                 myLevelDescriptionText.setText(R.string.level1Description);
                 setLevelColor(level);
-
                 break;
             case 2 :
                 explosionField.explode(avatar);
                 expBar.setMax(level2Exp);
-                expBar.setProgress(MyExp);
                 myLevelText.setText(R.string.level2Title);
                 myLevelDescriptionText.setText(R.string.level2Description);
                 setLevelColor(level);
@@ -202,7 +196,6 @@ public class MyLevelActivity extends AppCompatActivity {
             case 3 :
                 explosionField.explode(avatar);
                 expBar.setMax(level3Exp);
-                expBar.setProgress(MyExp);
                 avatar.setImageResource(R.drawable.level3);
                 myLevelText.setText(R.string.level3Title);
                 myLevelDescriptionText.setText(R.string.level3Description);
@@ -218,7 +211,6 @@ public class MyLevelActivity extends AppCompatActivity {
             case 4 :
                 explosionField.explode(avatar);
                 expBar.setMax(level4Exp);
-                expBar.setProgress(MyExp);
                 avatar.setImageResource(R.drawable.level4);
                 myLevelText.setText(R.string.level4Title);
                 myLevelDescriptionText.setText(R.string.level4Description);
@@ -234,7 +226,6 @@ public class MyLevelActivity extends AppCompatActivity {
             case 5 :
                 explosionField.explode(avatar);
                 expBar.setMax(level5Exp);
-                expBar.setProgress(MyExp);
                 avatar.setImageResource(R.drawable.level5);
                 myLevelText.setText(R.string.level5Title);
                 myLevelDescriptionText.setText(R.string.level5Description);
@@ -249,7 +240,6 @@ public class MyLevelActivity extends AppCompatActivity {
                 break;
             default:
                 expBar.setMax(120);
-                expBar.setProgress(MyExp);
                 explosionField.explode(avatar);
                 break;
         }

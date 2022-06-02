@@ -44,7 +44,6 @@
             android:layout_height="300dp"
             android:background="@drawable/progressbar_circularbg"
             android:indeterminateOnly="false"
-            android:max="120"
             android:progress="20"
             android:progressDrawable="@drawable/progressbar_circular" />
 

@@ -10,8 +10,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
-import java.util.MissingFormatArgumentException;
-
 public class ScanQRActivity extends AppCompatActivity {
     private IntentIntegrator qrScan;
     private String uri;
