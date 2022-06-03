@@ -94,16 +94,16 @@ public class MyLevelActivity extends AppCompatActivity {
                 if(0 <= myExp && myExp <= 240){
                     myLevel = 1;
                 }
-                else if(240 < myExp && myExp <= 360){
+                if(240 < myExp && myExp <= 600){
                     myLevel = 2;
                 }
-                else if(360 < myExp && myExp <= 480){
+                if(600 < myExp && myExp <= 1080){
                     myLevel = 3;
                 }
-                else if(480 < myExp && myExp <= 600){
+                if(1080 < myExp && myExp <= 1680){
                     myLevel = 4;
                 }
-                else if(600 < myExp){
+                if(1680 < myExp){
                     myLevel = 5;
                 }
 
@@ -152,8 +152,6 @@ public class MyLevelActivity extends AppCompatActivity {
                                     String exp_value = Integer.toString(myExp);
                                     databaseReference.child(emailToken).child("CurrentExp").setValue(value);
                                     databaseReference.child(emailToken).child("Exp").setValue(exp_value);
-                                    expBar.setProgress(myExp);
-
                                 }
                             }
                         });
